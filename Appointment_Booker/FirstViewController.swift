@@ -9,7 +9,9 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    let reuseIdentifier = "weekdayCell"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,3 +20,14 @@ class FirstViewController: UIViewController {
 
 }
 
+extension FirstViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+        return cell
+    }
+}
