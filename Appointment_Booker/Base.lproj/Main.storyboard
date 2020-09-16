@@ -17,23 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vc5-Ho-jWw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="75"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="9cj-qp-fLv"/>
-                                </constraints>
                                 <viewLayoutGuide key="safeArea" id="4kn-E3-X5j"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MfG-dc-MOI">
-                                    <size key="itemSize" width="115" height="73"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MfG-dc-MOI">
+                                    <size key="itemSize" width="115" height="75"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weekdayCell" id="Yhs-bh-BEI">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="73"/>
+                                        <rect key="frame" x="0.0" y="8.5" width="115" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2z0-OZ-FS8">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GWq-rM-Jrn">
                                             <rect key="frame" x="0.0" y="0.0" width="115" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -49,6 +46,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Vc5-Ho-jWw" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.1" id="fSb-oo-JKk"/>
                             <constraint firstItem="Vc5-Ho-jWw" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="hO1-7g-7SF"/>
                             <constraint firstItem="Vc5-Ho-jWw" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="mbw-UJ-9WC"/>
                             <constraint firstItem="Vc5-Ho-jWw" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="ncb-4F-cJv"/>
@@ -56,6 +54,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="weekdayCollectionView" destination="Vc5-Ho-jWw" id="AVT-eM-egd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
