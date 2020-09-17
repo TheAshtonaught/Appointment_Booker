@@ -9,18 +9,19 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    let reuseIdentifier = "weekdayCell"
-    //let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    let weekdayCellReuseIdentifier = "weekdayCell"
+    let apptTimeReuseIdentifier = "apptTimeCell"
+    let weekdayCollectionViewTag = 0
+    let appTimeCollectionViewTag = 1
+    var collectionViewSize: CGSize = CGSize()
     @IBOutlet weak var weekdayCollectionView: UICollectionView!
+    @IBOutlet weak var apptTimeCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        collectionViewSize = apptTimeCollectionView.frame.size
     }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-    }
+    
 
 }
 
@@ -31,17 +32,40 @@ extension FirstViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let tag = collectionView.tag
         
-        return cell
+        switch tag {
+        case weekdayCollectionViewTag:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: weekdayCellReuseIdentifier, for: indexPath)
+            return cell
+        case appTimeCollectionViewTag:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: apptTimeReuseIdentifier, for: indexPath)
+            return cell
+        default:
+            print("Unable to get cell tag")
+        }
+        
+        
+        
+        return UICollectionViewCell()
     }
+    
+    
 }
 
 // MARK: UICollectionViewFlowLayoutDelegate
 extension FirstViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = view.frame.width / 3.5
-        
-        return CGSize(width: cellWidth, height: collectionView.frame.height)
+        if collectionView.tag == weekdayCollectionViewTag {
+            return CGSize(width: view.frame.width / 3.5, height: collectionView.frame.height)
+        } else {
+            let paddingSpace: CGFloat = 10 * (2 + 1)
+            let availableWidth = view.frame.width - paddingSpace
+            let cellWidth = availableWidth / 2
+            return CGSize(width: cellWidth, height: collectionView.frame.height / 8)
+        }
     }
+    
+    
+    
 }
