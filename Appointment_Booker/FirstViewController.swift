@@ -13,12 +13,11 @@ class FirstViewController: UIViewController {
     let apptTimeReuseIdentifier = "apptTimeCell"
     let weekdayCollectionViewTag = 0
     let appTimeCollectionViewTag = 1
-    var collectionViewSize: CGSize = CGSize()
     @IBOutlet weak var weekdayCollectionView: UICollectionView!
     @IBOutlet weak var apptTimeCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionViewSize = apptTimeCollectionView.frame.size
+        
     }
 
     
@@ -28,16 +27,26 @@ class FirstViewController: UIViewController {
 // MARK: UICollectionViewDataSource
 extension FirstViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        switch collectionView.tag {
+        case weekdayCollectionViewTag:
+            return 7
+        case appTimeCollectionViewTag:
+            return 20
+        default:
+            return 0
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let tag = collectionView.tag
         
-        switch tag {
+        switch collectionView.tag {
         case weekdayCollectionViewTag:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: weekdayCellReuseIdentifier, for: indexPath)
-            return cell
+            guard let weekdayCell = collectionView.dequeueReusableCell(withReuseIdentifier: weekdayCellReuseIdentifier, for: indexPath) as? WeekdayCell else {
+                return UICollectionViewCell()
+            }
+            weekdayCell.setImage(indexPath: indexPath)
+            return weekdayCell
         case appTimeCollectionViewTag:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: apptTimeReuseIdentifier, for: indexPath)
             return cell
@@ -57,7 +66,7 @@ extension FirstViewController: UICollectionViewDataSource {
 extension FirstViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView.tag == weekdayCollectionViewTag {
-            return CGSize(width: view.frame.width / 3.5, height: collectionView.frame.height)
+            return CGSize(width: view.frame.width / 3.5, height: collectionView.frame.height - 5)
         } else {
             let paddingSpace: CGFloat = 10 * (2 + 1)
             let availableWidth = view.frame.width - paddingSpace
