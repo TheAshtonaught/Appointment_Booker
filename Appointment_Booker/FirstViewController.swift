@@ -20,7 +20,10 @@ class FirstViewController: UIViewController {
         
     }
 
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
 
 }
 
@@ -48,8 +51,10 @@ extension FirstViewController: UICollectionViewDataSource {
             weekdayCell.setImage(indexPath: indexPath)
             return weekdayCell
         case appTimeCollectionViewTag:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: apptTimeReuseIdentifier, for: indexPath)
-            return cell
+            guard let appointmentTimeCell = collectionView.dequeueReusableCell(withReuseIdentifier: apptTimeReuseIdentifier, for: indexPath) as? AppoitntmentTimeCell else {
+                return UICollectionViewCell()
+            }
+            return appointmentTimeCell
         default:
             print("Unable to get cell tag")
         }

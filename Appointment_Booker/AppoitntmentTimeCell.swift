@@ -9,5 +9,10 @@
 import UIKit
 
 class AppoitntmentTimeCell: UICollectionViewCell {
+    @IBOutlet weak var apptButton: AppointmentTimeButton!
     
+    @IBAction func appointmentButtonPressed(_ button: AppointmentTimeButton) {
+        
+        button.startAnimation()
+    }
 }
