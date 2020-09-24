@@ -7,32 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091A2D6A251BA71A00AA9C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091A2D69251BA71A00AA9C88 /* Main.storyboard */; };
+		091A2D6E251BBC0300AA9C88 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091A2D6D251BBC0300AA9C88 /* Default-568h@2x.png */; };
+		091A2D72251BDB7A00AA9C88 /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091A2D71251BDB7A00AA9C88 /* CardViewCell.swift */; };
 		0949AF6925100FD4006DC011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0949AF6825100FD4006DC011 /* AppDelegate.swift */; };
 		0949AF6D25100FD4006DC011 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0949AF6C25100FD4006DC011 /* FirstViewController.swift */; };
 		0949AF6F25100FD4006DC011 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0949AF6E25100FD4006DC011 /* SecondViewController.swift */; };
-		0949AF7225100FD4006DC011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7025100FD4006DC011 /* Main.storyboard */; };
 		0949AF7425100FD6006DC011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7325100FD6006DC011 /* Assets.xcassets */; };
 		0949AF7725100FD6006DC011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */; };
+		09634BFE251CEAEB00A02DE5 /* CardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09634BFD251CEAEB00A02DE5 /* CardContainer.swift */; };
 		09F06A592517A80B00EEA54E /* WeekdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A582517A80B00EEA54E /* WeekdayCell.swift */; };
 		09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */; };
 		09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */; };
-		09F06A5F2519BBC300EEA54E /* AppoitntmentTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5E2519BBC300EEA54E /* AppoitntmentTimeCell.swift */; };
 		503B4FA36A618AD9AB313B2B /* Pods_Appointment_Booker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D232E3B82DE2160AFC7367EC /* Pods_Appointment_Booker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		091A2D69251BA71A00AA9C88 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		091A2D6D251BBC0300AA9C88 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		091A2D71251BDB7A00AA9C88 /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		0949AF6525100FD4006DC011 /* Appointment_Booker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appointment_Booker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0949AF6825100FD4006DC011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0949AF6C25100FD4006DC011 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		0949AF6E25100FD4006DC011 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		0949AF7125100FD4006DC011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0949AF7325100FD6006DC011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0949AF7625100FD6006DC011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0949AF7825100FD6006DC011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09634BFD251CEAEB00A02DE5 /* CardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainer.swift; sourceTree = "<group>"; };
 		09F06A582517A80B00EEA54E /* WeekdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayCell.swift; sourceTree = "<group>"; };
 		09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTimeButton.swift; sourceTree = "<group>"; };
-		09F06A5E2519BBC300EEA54E /* AppoitntmentTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitntmentTimeCell.swift; sourceTree = "<group>"; };
 		8E23497A8B7DF9879A9F0392 /* Pods-Appointment_Booker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appointment_Booker.debug.xcconfig"; path = "Target Support Files/Pods-Appointment_Booker/Pods-Appointment_Booker.debug.xcconfig"; sourceTree = "<group>"; };
 		D232E3B82DE2160AFC7367EC /* Pods_Appointment_Booker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Appointment_Booker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9CF524F05EF2CCF8AE3BA0 /* Pods-Appointment_Booker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Appointment_Booker.release.xcconfig"; path = "Target Support Files/Pods-Appointment_Booker/Pods-Appointment_Booker.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,9 +54,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091A2D6B251BBB8300AA9C88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */,
+				09F06A582517A80B00EEA54E /* WeekdayCell.swift */,
+				091A2D71251BDB7A00AA9C88 /* CardViewCell.swift */,
+				09634BFD251CEAEB00A02DE5 /* CardContainer.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		091A2D6C251BBBE700AA9C88 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */,
+				0949AF6825100FD4006DC011 /* AppDelegate.swift */,
+				0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */,
+				091A2D69251BA71A00AA9C88 /* Main.storyboard */,
+				0949AF7325100FD6006DC011 /* Assets.xcassets */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		091A2D6F251BBC1000AA9C88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0949AF6C25100FD4006DC011 /* FirstViewController.swift */,
+				0949AF6E25100FD4006DC011 /* SecondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		091A2D70251BBC1700AA9C88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0949AF5C25100FD4006DC011 = {
 			isa = PBXGroup;
 			children = (
+				091A2D6D251BBC0300AA9C88 /* Default-568h@2x.png */,
 				0949AF6725100FD4006DC011 /* Appointment_Booker */,
 				0949AF6625100FD4006DC011 /* Products */,
 				80CF7C56238C5FD8E2781427 /* Pods */,
@@ -71,17 +115,11 @@
 		0949AF6725100FD4006DC011 /* Appointment_Booker */ = {
 			isa = PBXGroup;
 			children = (
-				0949AF6825100FD4006DC011 /* AppDelegate.swift */,
-				09F06A582517A80B00EEA54E /* WeekdayCell.swift */,
-				0949AF6C25100FD4006DC011 /* FirstViewController.swift */,
-				09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */,
-				0949AF6E25100FD4006DC011 /* SecondViewController.swift */,
-				0949AF7025100FD4006DC011 /* Main.storyboard */,
-				0949AF7325100FD6006DC011 /* Assets.xcassets */,
-				0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */,
 				0949AF7825100FD6006DC011 /* Info.plist */,
-				09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */,
-				09F06A5E2519BBC300EEA54E /* AppoitntmentTimeCell.swift */,
+				091A2D70251BBC1700AA9C88 /* Model */,
+				091A2D6F251BBC1000AA9C88 /* Controller */,
+				091A2D6C251BBBE700AA9C88 /* Utilities */,
+				091A2D6B251BBB8300AA9C88 /* View */,
 			);
 			path = Appointment_Booker;
 			sourceTree = "<group>";
@@ -163,9 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091A2D6A251BA71A00AA9C88 /* Main.storyboard in Resources */,
+				091A2D6E251BBC0300AA9C88 /* Default-568h@2x.png in Resources */,
 				0949AF7725100FD6006DC011 /* LaunchScreen.storyboard in Resources */,
 				0949AF7425100FD6006DC011 /* Assets.xcassets in Resources */,
-				0949AF7225100FD4006DC011 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09F06A5F2519BBC300EEA54E /* AppoitntmentTimeCell.swift in Sources */,
 				09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */,
+				091A2D72251BDB7A00AA9C88 /* CardViewCell.swift in Sources */,
 				0949AF6F25100FD4006DC011 /* SecondViewController.swift in Sources */,
+				09634BFE251CEAEB00A02DE5 /* CardContainer.swift in Sources */,
 				09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */,
 				0949AF6D25100FD4006DC011 /* FirstViewController.swift in Sources */,
 				09F06A592517A80B00EEA54E /* WeekdayCell.swift in Sources */,
@@ -231,14 +271,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0949AF7025100FD4006DC011 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0949AF7125100FD4006DC011 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

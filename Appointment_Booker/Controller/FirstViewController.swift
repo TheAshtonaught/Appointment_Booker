@@ -10,7 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
     let weekdayCellReuseIdentifier = "weekdayCell"
-    let apptTimeReuseIdentifier = "apptTimeCell"
+    let cardViewReuseIdentifier = "cardViewCell"
     let weekdayCollectionViewTag = 0
     let appTimeCollectionViewTag = 1
     @IBOutlet weak var weekdayCollectionView: UICollectionView!
@@ -51,10 +51,11 @@ extension FirstViewController: UICollectionViewDataSource {
             weekdayCell.setImage(indexPath: indexPath)
             return weekdayCell
         case appTimeCollectionViewTag:
-            guard let appointmentTimeCell = collectionView.dequeueReusableCell(withReuseIdentifier: apptTimeReuseIdentifier, for: indexPath) as? AppoitntmentTimeCell else {
+            guard let cardViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cardViewReuseIdentifier, for: indexPath) as? CardViewCell else {
                 return UICollectionViewCell()
             }
-            return appointmentTimeCell
+            
+            return cardViewCell
         default:
             print("Unable to get cell tag")
         }
@@ -71,12 +72,11 @@ extension FirstViewController: UICollectionViewDataSource {
 extension FirstViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView.tag == weekdayCollectionViewTag {
-            return CGSize(width: view.frame.width / 3.5, height: collectionView.frame.height - 5)
+            return CGSize(width: view.frame.width / 4, height: collectionView.frame.height - 5)
         } else {
-            let paddingSpace: CGFloat = 10 * (2 + 1)
-            let availableWidth = view.frame.width - paddingSpace
-            let cellWidth = availableWidth / 2
-            return CGSize(width: cellWidth, height: collectionView.frame.height / 8)
+            let availableWidth = view.frame.width - 40
+            let cellWidth = availableWidth
+            return CGSize(width: cellWidth, height: collectionView.frame.height / 2)
         }
     }
     
