@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vc5-Ho-jWw">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vc5-Ho-jWw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="71.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <viewLayoutGuide key="safeArea" id="4kn-E3-X5j"/>
@@ -63,28 +63,32 @@
                                     <size key="itemSize" width="188" height="108"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardViewCell" id="b3F-WI-d4J" customClass="CardViewCell" customModule="Appointment_Booker" customModuleProvider="target">
-                                        <rect key="frame" x="113" y="0.0" width="188" height="108"/>
+                                        <rect key="frame" x="113" y="10" width="188" height="108"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eid-at-9lc">
                                             <rect key="frame" x="0.0" y="0.0" width="188" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c80-Y3-8XK" customClass="CardContainer" customModule="Appointment_Booker" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="10" width="168" height="88"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Appointments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bch-90-vxU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="188" height="32.5"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="c80-Y3-8XK" secondAttribute="trailing" constant="10" id="f58-Sr-5Qf"/>
-                                            <constraint firstItem="c80-Y3-8XK" firstAttribute="leading" secondItem="b3F-WI-d4J" secondAttribute="leading" constant="10" id="oaF-9S-kXl"/>
-                                            <constraint firstAttribute="bottom" secondItem="c80-Y3-8XK" secondAttribute="bottom" constant="10" id="onB-YC-9YE"/>
-                                            <constraint firstItem="c80-Y3-8XK" firstAttribute="top" secondItem="b3F-WI-d4J" secondAttribute="top" constant="10" id="qva-h1-aF8"/>
-                                        </constraints>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Bch-90-vxU" firstAttribute="top" secondItem="eid-at-9lc" secondAttribute="top" id="7dr-Np-SHC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Bch-90-vxU" secondAttribute="trailing" id="A6f-tk-bjS"/>
+                                                <constraint firstItem="Bch-90-vxU" firstAttribute="height" secondItem="eid-at-9lc" secondAttribute="height" multiplier="0.3" id="HEc-op-W8Z"/>
+                                                <constraint firstItem="Bch-90-vxU" firstAttribute="leading" secondItem="eid-at-9lc" secondAttribute="leading" id="Hq3-yO-dPe"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
                                         <size key="customSize" width="188" height="108"/>
                                     </collectionViewCell>
                                 </cells>

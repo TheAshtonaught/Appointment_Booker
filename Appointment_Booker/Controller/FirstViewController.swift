@@ -54,6 +54,7 @@ extension FirstViewController: UICollectionViewDataSource {
             guard let cardViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cardViewReuseIdentifier, for: indexPath) as? CardViewCell else {
                 return UICollectionViewCell()
             }
+            //cardViewCell.contentView.layer.cornerRadius = 10
             
             return cardViewCell
         default:

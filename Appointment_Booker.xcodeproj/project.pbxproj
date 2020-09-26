@@ -15,7 +15,6 @@
 		0949AF6F25100FD4006DC011 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0949AF6E25100FD4006DC011 /* SecondViewController.swift */; };
 		0949AF7425100FD6006DC011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7325100FD6006DC011 /* Assets.xcassets */; };
 		0949AF7725100FD6006DC011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */; };
-		09634BFE251CEAEB00A02DE5 /* CardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09634BFD251CEAEB00A02DE5 /* CardContainer.swift */; };
 		09F06A592517A80B00EEA54E /* WeekdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A582517A80B00EEA54E /* WeekdayCell.swift */; };
 		09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */; };
 		09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */; };
@@ -33,7 +32,6 @@
 		0949AF7325100FD6006DC011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0949AF7625100FD6006DC011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0949AF7825100FD6006DC011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09634BFD251CEAEB00A02DE5 /* CardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainer.swift; sourceTree = "<group>"; };
 		09F06A582517A80B00EEA54E /* WeekdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayCell.swift; sourceTree = "<group>"; };
 		09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTimeButton.swift; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 				09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */,
 				09F06A582517A80B00EEA54E /* WeekdayCell.swift */,
 				091A2D71251BDB7A00AA9C88 /* CardViewCell.swift */,
-				09634BFD251CEAEB00A02DE5 /* CardContainer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */,
 				091A2D72251BDB7A00AA9C88 /* CardViewCell.swift in Sources */,
 				0949AF6F25100FD4006DC011 /* SecondViewController.swift in Sources */,
-				09634BFE251CEAEB00A02DE5 /* CardContainer.swift in Sources */,
 				09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */,
 				0949AF6D25100FD4006DC011 /* FirstViewController.swift in Sources */,
 				09F06A592517A80B00EEA54E /* WeekdayCell.swift in Sources */,

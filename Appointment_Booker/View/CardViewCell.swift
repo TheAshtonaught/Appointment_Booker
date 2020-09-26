@@ -10,30 +10,31 @@ import UIKit
 
 class CardViewCell: UICollectionViewCell {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        //setupCardView()
-    }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        //setupCardView()
+        
         
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-//        setupCardView()
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupCard()
     }
     
-//    func setupCardView() {
-//        cardView.layer.cornerRadius = 20.0
-//        cardView.layer.shadowColor = UIColor.gray.cgColor
-//        cardView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-//        cardView.layer.shadowRadius = 20.0
-//        cardView.layer.shadowOpacity = 0.7
-//    }
-    
+    func setupCard() {
+        contentView.layer.cornerRadius = 10
+        contentView.layer.borderWidth = 1.0
+        contentView.layer.borderColor = UIColor.clear.cgColor
+        contentView.layer.masksToBounds = true
+
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 10.0)
+        self.layer.shadowRadius = 3.0
+        self.layer.shadowOpacity = 0.5
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+        self.layer.backgroundColor = UIColor.clear.cgColor
+    }
 }
