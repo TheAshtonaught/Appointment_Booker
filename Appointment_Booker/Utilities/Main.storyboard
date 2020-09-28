@@ -73,23 +73,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="188" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Appointments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bch-90-vxU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="188" height="32.5"/>
-                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-Ul-Tl8">
+                                                    <rect key="frame" x="5" y="0.0" width="121" height="32.5"/>
+                                                    <string key="text">Available
+Appointments</string>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vl-eN-oVz">
+                                                    <rect key="frame" x="142" y="0.0" width="42" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="Bch-90-vxU" firstAttribute="top" secondItem="eid-at-9lc" secondAttribute="top" id="7dr-Np-SHC"/>
-                                                <constraint firstAttribute="trailing" secondItem="Bch-90-vxU" secondAttribute="trailing" id="A6f-tk-bjS"/>
-                                                <constraint firstItem="Bch-90-vxU" firstAttribute="height" secondItem="eid-at-9lc" secondAttribute="height" multiplier="0.3" id="HEc-op-W8Z"/>
-                                                <constraint firstItem="Bch-90-vxU" firstAttribute="leading" secondItem="eid-at-9lc" secondAttribute="leading" id="Hq3-yO-dPe"/>
+                                                <constraint firstItem="QgA-Ul-Tl8" firstAttribute="height" secondItem="eid-at-9lc" secondAttribute="height" multiplier="0.3" id="4zp-YJ-ekt"/>
+                                                <constraint firstItem="6Vl-eN-oVz" firstAttribute="height" secondItem="QgA-Ul-Tl8" secondAttribute="height" multiplier="0.892308" id="5RA-Vb-7a9"/>
+                                                <constraint firstItem="6Vl-eN-oVz" firstAttribute="width" secondItem="eid-at-9lc" secondAttribute="width" multiplier="0.33" constant="-20.040000000000006" id="6an-gR-HQv"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Vl-eN-oVz" secondAttribute="trailing" constant="4" id="Alp-hg-CY4"/>
+                                                <constraint firstItem="6Vl-eN-oVz" firstAttribute="top" secondItem="eid-at-9lc" secondAttribute="top" id="GST-Jg-IGl"/>
+                                                <constraint firstItem="6Vl-eN-oVz" firstAttribute="leading" secondItem="QgA-Ul-Tl8" secondAttribute="trailing" constant="16" id="UuF-z1-J3O"/>
+                                                <constraint firstItem="QgA-Ul-Tl8" firstAttribute="top" secondItem="eid-at-9lc" secondAttribute="top" id="Uv0-V4-pvU"/>
+                                                <constraint firstItem="QgA-Ul-Tl8" firstAttribute="leading" secondItem="eid-at-9lc" secondAttribute="leading" constant="5" id="gao-KA-jsu"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="188" height="108"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="6Vl-eN-oVz" id="MxV-0P-Lum"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -183,7 +197,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9hz-w6-RfK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

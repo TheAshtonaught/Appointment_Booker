@@ -15,6 +15,7 @@
 		0949AF6F25100FD4006DC011 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0949AF6E25100FD4006DC011 /* SecondViewController.swift */; };
 		0949AF7425100FD6006DC011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7325100FD6006DC011 /* Assets.xcassets */; };
 		0949AF7725100FD6006DC011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */; };
+		0965E67C2520F0FE0025748F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E67B2520F0FE0025748F /* UIView+Extension.swift */; };
 		09F06A592517A80B00EEA54E /* WeekdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A582517A80B00EEA54E /* WeekdayCell.swift */; };
 		09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */; };
 		09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */; };
@@ -32,6 +33,7 @@
 		0949AF7325100FD6006DC011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0949AF7625100FD6006DC011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0949AF7825100FD6006DC011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0965E67B2520F0FE0025748F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		09F06A582517A80B00EEA54E /* WeekdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayCell.swift; sourceTree = "<group>"; };
 		09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTimeButton.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */,
 				091A2D69251BA71A00AA9C88 /* Main.storyboard */,
 				0949AF7325100FD6006DC011 /* Assets.xcassets */,
+				0965E67B2520F0FE0025748F /* UIView+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */,
 				091A2D72251BDB7A00AA9C88 /* CardViewCell.swift in Sources */,
+				0965E67C2520F0FE0025748F /* UIView+Extension.swift in Sources */,
 				0949AF6F25100FD4006DC011 /* SecondViewController.swift in Sources */,
 				09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */,
 				0949AF6D25100FD4006DC011 /* FirstViewController.swift in Sources */,
@@ -328,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -382,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -397,6 +401,7 @@
 			baseConfigurationReference = 8E23497A8B7DF9879A9F0392 /* Pods-Appointment_Booker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBHTHFFDG2;
 				INFOPLIST_FILE = Appointment_Booker/Info.plist;
@@ -406,6 +411,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "algebet.Appointment-Booker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,6 +422,7 @@
 			baseConfigurationReference = DA9CF524F05EF2CCF8AE3BA0 /* Pods-Appointment_Booker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBHTHFFDG2;
 				INFOPLIST_FILE = Appointment_Booker/Info.plist;
@@ -425,6 +432,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "algebet.Appointment-Booker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

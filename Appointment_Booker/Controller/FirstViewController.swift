@@ -30,11 +30,13 @@ class FirstViewController: UIViewController {
 // MARK: UICollectionViewDataSource
 extension FirstViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        // Switch statement configures the amount of cells needed for each collection view
         switch collectionView.tag {
         case weekdayCollectionViewTag:
             return 7
         case appTimeCollectionViewTag:
-            return 20
+            return 3
         default:
             return 0
         }
@@ -48,20 +50,19 @@ extension FirstViewController: UICollectionViewDataSource {
             guard let weekdayCell = collectionView.dequeueReusableCell(withReuseIdentifier: weekdayCellReuseIdentifier, for: indexPath) as? WeekdayCell else {
                 return UICollectionViewCell()
             }
+            // weekday cells contain icons that display each day of the week index path determines the icon for each
+            // position in the colleciton view
             weekdayCell.setImage(indexPath: indexPath)
             return weekdayCell
         case appTimeCollectionViewTag:
             guard let cardViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cardViewReuseIdentifier, for: indexPath) as? CardViewCell else {
                 return UICollectionViewCell()
             }
-            //cardViewCell.contentView.layer.cornerRadius = 10
             
             return cardViewCell
         default:
             print("Unable to get cell tag")
         }
-        
-        
         
         return UICollectionViewCell()
     }
@@ -77,7 +78,7 @@ extension FirstViewController: UICollectionViewDelegateFlowLayout {
         } else {
             let availableWidth = view.frame.width - 40
             let cellWidth = availableWidth
-            return CGSize(width: cellWidth, height: collectionView.frame.height / 2)
+            return CGSize(width: cellWidth, height: collectionView.frame.height * 0.5)
         }
     }
     
