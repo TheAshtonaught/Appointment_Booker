@@ -16,6 +16,8 @@
 		0949AF7425100FD6006DC011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7325100FD6006DC011 /* Assets.xcassets */; };
 		0949AF7725100FD6006DC011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0949AF7525100FD6006DC011 /* LaunchScreen.storyboard */; };
 		0965E67C2520F0FE0025748F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E67B2520F0FE0025748F /* UIView+Extension.swift */; };
+		0965E67E2523B1BC0025748F /* ApptTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E67D2523B1BC0025748F /* ApptTimeCell.swift */; };
+		0965E6802524E7F30025748F /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965E67F2524E7F30025748F /* UICollectionViewCell+Extension.swift */; };
 		09F06A592517A80B00EEA54E /* WeekdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A582517A80B00EEA54E /* WeekdayCell.swift */; };
 		09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */; };
 		09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */; };
@@ -34,6 +36,8 @@
 		0949AF7625100FD6006DC011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0949AF7825100FD6006DC011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0965E67B2520F0FE0025748F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		0965E67D2523B1BC0025748F /* ApptTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptTimeCell.swift; sourceTree = "<group>"; };
+		0965E67F2524E7F30025748F /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		09F06A582517A80B00EEA54E /* WeekdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayCell.swift; sourceTree = "<group>"; };
 		09F06A5A2517AB1F00EEA54E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTimeButton.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 				09F06A5C25199A4200EEA54E /* AppointmentTimeButton.swift */,
 				09F06A582517A80B00EEA54E /* WeekdayCell.swift */,
 				091A2D71251BDB7A00AA9C88 /* CardViewCell.swift */,
+				0965E67D2523B1BC0025748F /* ApptTimeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -73,6 +78,7 @@
 				091A2D69251BA71A00AA9C88 /* Main.storyboard */,
 				0949AF7325100FD6006DC011 /* Assets.xcassets */,
 				0965E67B2520F0FE0025748F /* UIView+Extension.swift */,
+				0965E67F2524E7F30025748F /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -259,11 +265,13 @@
 			files = (
 				09F06A5B2517AB1F00EEA54E /* SceneDelegate.swift in Sources */,
 				091A2D72251BDB7A00AA9C88 /* CardViewCell.swift in Sources */,
+				0965E67E2523B1BC0025748F /* ApptTimeCell.swift in Sources */,
 				0965E67C2520F0FE0025748F /* UIView+Extension.swift in Sources */,
 				0949AF6F25100FD4006DC011 /* SecondViewController.swift in Sources */,
 				09F06A5D25199A4200EEA54E /* AppointmentTimeButton.swift in Sources */,
 				0949AF6D25100FD4006DC011 /* FirstViewController.swift in Sources */,
 				09F06A592517A80B00EEA54E /* WeekdayCell.swift in Sources */,
+				0965E6802524E7F30025748F /* UICollectionViewCell+Extension.swift in Sources */,
 				0949AF6925100FD4006DC011 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

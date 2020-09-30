@@ -60,21 +60,21 @@
                                 <rect key="frame" x="0.0" y="169.5" width="414" height="643.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="5" id="kPq-bg-dKN">
-                                    <size key="itemSize" width="188" height="108"/>
+                                    <size key="itemSize" width="302" height="199"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardViewCell" id="b3F-WI-d4J" customClass="CardViewCell" customModule="Appointment_Booker" customModuleProvider="target">
-                                        <rect key="frame" x="113" y="10" width="188" height="108"/>
+                                        <rect key="frame" x="56" y="10" width="302" height="199"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eid-at-9lc">
-                                            <rect key="frame" x="0.0" y="0.0" width="188" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="302" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-Ul-Tl8">
-                                                    <rect key="frame" x="5" y="0.0" width="121" height="32.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="197.5" height="59.5"/>
                                                     <string key="text">Available
 Appointments</string>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
@@ -82,25 +82,75 @@ Appointments</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vl-eN-oVz">
-                                                    <rect key="frame" x="142" y="0.0" width="42" height="29"/>
+                                                    <rect key="frame" x="218.5" y="0.0" width="79.5" height="53.5"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SR6-mS-bs7">
+                                                    <rect key="frame" x="0.0" y="159" width="302" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pW6-Jb-1VN">
+                                                        <size key="itemSize" width="115" height="41"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="10" minY="5" maxX="0.0" maxY="5"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="apptTimeCell" id="0hD-2X-umO" customClass="ApptTimeCell" customModule="Appointment_Booker" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="5" width="115" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lPe-K5-VM8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5C-R8-54V" customClass="AppointmentTimeButton" customModule="Appointment_Booker" customModuleProvider="target">
+                                                                        <rect key="frame" x="5" y="0.0" width="105" height="30"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                                        <state key="normal" title="10:15">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="17"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="W5C-R8-54V" firstAttribute="leading" secondItem="lPe-K5-VM8" secondAttribute="leading" constant="5" id="Fo0-fu-MYr"/>
+                                                                    <constraint firstItem="W5C-R8-54V" firstAttribute="top" secondItem="lPe-K5-VM8" secondAttribute="top" id="ONB-Qd-7WP"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="W5C-R8-54V" secondAttribute="bottom" id="bCj-Bm-ho1"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="W5C-R8-54V" secondAttribute="trailing" constant="5" id="zJt-r5-emP"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="115" height="30"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="b3F-WI-d4J" id="Kke-ry-jc3"/>
+                                                        <outlet property="delegate" destination="b3F-WI-d4J" id="d5C-IT-Kv6"/>
+                                                    </connections>
+                                                </collectionView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="QgA-Ul-Tl8" firstAttribute="height" secondItem="eid-at-9lc" secondAttribute="height" multiplier="0.3" id="4zp-YJ-ekt"/>
                                                 <constraint firstItem="6Vl-eN-oVz" firstAttribute="height" secondItem="QgA-Ul-Tl8" secondAttribute="height" multiplier="0.892308" id="5RA-Vb-7a9"/>
                                                 <constraint firstItem="6Vl-eN-oVz" firstAttribute="width" secondItem="eid-at-9lc" secondAttribute="width" multiplier="0.33" constant="-20.040000000000006" id="6an-gR-HQv"/>
+                                                <constraint firstItem="SR6-mS-bs7" firstAttribute="leading" secondItem="eid-at-9lc" secondAttribute="leading" id="AI7-YA-InR"/>
                                                 <constraint firstAttribute="trailing" secondItem="6Vl-eN-oVz" secondAttribute="trailing" constant="4" id="Alp-hg-CY4"/>
                                                 <constraint firstItem="6Vl-eN-oVz" firstAttribute="top" secondItem="eid-at-9lc" secondAttribute="top" id="GST-Jg-IGl"/>
+                                                <constraint firstAttribute="bottom" secondItem="SR6-mS-bs7" secondAttribute="bottom" id="N5J-au-yHZ"/>
                                                 <constraint firstItem="6Vl-eN-oVz" firstAttribute="leading" secondItem="QgA-Ul-Tl8" secondAttribute="trailing" constant="16" id="UuF-z1-J3O"/>
                                                 <constraint firstItem="QgA-Ul-Tl8" firstAttribute="top" secondItem="eid-at-9lc" secondAttribute="top" id="Uv0-V4-pvU"/>
+                                                <constraint firstItem="SR6-mS-bs7" firstAttribute="height" secondItem="eid-at-9lc" secondAttribute="height" multiplier="0.2" id="ajn-JH-NQ5"/>
+                                                <constraint firstAttribute="trailing" secondItem="SR6-mS-bs7" secondAttribute="trailing" id="edF-Nd-dmF"/>
                                                 <constraint firstItem="QgA-Ul-Tl8" firstAttribute="leading" secondItem="eid-at-9lc" secondAttribute="leading" constant="5" id="gao-KA-jsu"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="188" height="108"/>
+                                        <size key="customSize" width="302" height="199"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="6Vl-eN-oVz" id="MxV-0P-Lum"/>
                                         </connections>
@@ -177,7 +227,8 @@ Appointments</string>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Xb1-mW-D3P" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -197,7 +248,8 @@ Appointments</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9hz-w6-RfK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

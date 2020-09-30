@@ -11,8 +11,14 @@ import TransitionButton
 
 class AppointmentTimeButton: TransitionButton {
     
-    
-    
+        
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 2.0
+        layer.backgroundColor = UIColor.red.cgColor
+    }
     
     /*
     // Only override draw() if you perform custom drawing.

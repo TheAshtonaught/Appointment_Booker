@@ -10,9 +10,11 @@ import UIKit
 
 class FirstViewController: UIViewController {
     let weekdayCellReuseIdentifier = "weekdayCell"
-    let cardViewReuseIdentifier = "cardViewCell"
+    let cardViewCellReuseIdentifier = "cardViewCell"
+    let appTimeCellReuseIdentifier = "apptTimeCell"
     let weekdayCollectionViewTag = 0
-    let appTimeCollectionViewTag = 1
+    let cardViewCollectionViewTag = 1
+    let appTimeCollectionViewTag = 2
     @IBOutlet weak var weekdayCollectionView: UICollectionView!
     @IBOutlet weak var apptTimeCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -35,8 +37,10 @@ extension FirstViewController: UICollectionViewDataSource {
         switch collectionView.tag {
         case weekdayCollectionViewTag:
             return 7
+        case cardViewCollectionViewTag:
+            return 1
         case appTimeCollectionViewTag:
-            return 3
+            return 5
         default:
             return 0
         }
@@ -54,17 +58,22 @@ extension FirstViewController: UICollectionViewDataSource {
             // position in the colleciton view
             weekdayCell.setImage(indexPath: indexPath)
             return weekdayCell
+        case cardViewCollectionViewTag:
+            guard let cardViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cardViewCellReuseIdentifier, for: indexPath) as? CardViewCell else {
+                return UICollectionViewCell()
+            }
+            return cardViewCell
         case appTimeCollectionViewTag:
-            guard let cardViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cardViewReuseIdentifier, for: indexPath) as? CardViewCell else {
+            guard let appTimeCell = collectionView.dequeueReusableCell(withReuseIdentifier: appTimeCellReuseIdentifier, for: indexPath) as? ApptTimeCell else {
+                
                 return UICollectionViewCell()
             }
             
-            return cardViewCell
+            return appTimeCell
         default:
-            print("Unable to get cell tag")
+            return UICollectionViewCell()
         }
         
-        return UICollectionViewCell()
     }
     
     
@@ -73,13 +82,21 @@ extension FirstViewController: UICollectionViewDataSource {
 // MARK: UICollectionViewFlowLayoutDelegate
 extension FirstViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView.tag == weekdayCollectionViewTag {
+        
+        switch collectionView.tag {
+        case weekdayCollectionViewTag:
             return CGSize(width: view.frame.width / 4, height: collectionView.frame.height - 5)
-        } else {
+        case cardViewCollectionViewTag:
             let availableWidth = view.frame.width - 40
             let cellWidth = availableWidth
             return CGSize(width: cellWidth, height: collectionView.frame.height * 0.5)
+        case appTimeCollectionViewTag:
+            return CGSize(width: view.frame.width / 3, height: collectionView.frame.height - 5)
+        default:
+            return view.frame.size
         }
+        
+        
     }
     
     
