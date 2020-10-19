@@ -12,6 +12,7 @@ class FirstViewController: UIViewController {
     let weekdayCellReuseIdentifier = "weekdayCell"
     let cardViewCellReuseIdentifier = "cardViewCell"
     let appTimeCellReuseIdentifier = "apptTimeCell"
+    let upcomingAppointmentCellReuseIdentifier = "UpcomingAppointmentCell"
     let weekdayCollectionViewTag = 0
     let cardViewCollectionViewTag = 1
     let appTimeCollectionViewTag = 2
@@ -38,7 +39,7 @@ extension FirstViewController: UICollectionViewDataSource {
         case weekdayCollectionViewTag:
             return 7
         case cardViewCollectionViewTag:
-            return 1
+            return 2
         case appTimeCollectionViewTag:
             return 5
         default:
@@ -59,10 +60,18 @@ extension FirstViewController: UICollectionViewDataSource {
             weekdayCell.setImage(indexPath: indexPath)
             return weekdayCell
         case cardViewCollectionViewTag:
-            guard let cardViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cardViewCellReuseIdentifier, for: indexPath) as? CardViewCell else {
-                return UICollectionViewCell()
+            if (indexPath.row == 0) {
+                guard let cardViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cardViewCellReuseIdentifier, for: indexPath) as? CardViewCell else {
+                    return UICollectionViewCell()
+                }
+                return cardViewCell
+            } else {
+                guard let upcommingApptCell = collectionView.dequeueReusableCell(withReuseIdentifier: upcomingAppointmentCellReuseIdentifier, for: indexPath) as? UpcomingAppointmentCell else {
+                    return UICollectionViewCell()
+                }
+                return upcommingApptCell
             }
-            return cardViewCell
+            
         case appTimeCollectionViewTag:
             guard let appTimeCell = collectionView.dequeueReusableCell(withReuseIdentifier: appTimeCellReuseIdentifier, for: indexPath) as? ApptTimeCell else {
                 
@@ -87,9 +96,16 @@ extension FirstViewController: UICollectionViewDelegateFlowLayout {
         case weekdayCollectionViewTag:
             return CGSize(width: view.frame.width / 4, height: collectionView.frame.height - 5)
         case cardViewCollectionViewTag:
-            let availableWidth = view.frame.width - 40
-            let cellWidth = availableWidth
-            return CGSize(width: cellWidth, height: collectionView.frame.height * 0.5)
+            let cellWidth = view.frame.width - 40
+            
+            if (indexPath.row == 1) {
+                // returns cell size for upcooming appoitnments cell
+                return CGSize(width: cellWidth, height: collectionView.frame.height * 0.2)
+            } else {
+                // returns cell size for available appointments cell
+                return CGSize(width: cellWidth, height: collectionView.frame.height * 0.5)
+            }
+            
         case appTimeCollectionViewTag:
             return CGSize(width: view.frame.width / 3, height: collectionView.frame.height - 5)
         default:

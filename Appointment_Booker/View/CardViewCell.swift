@@ -27,6 +27,7 @@ class CardViewCell: UICollectionViewCell {
     
 }
 
+// Appointment Time cell Delegate
 extension CardViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5

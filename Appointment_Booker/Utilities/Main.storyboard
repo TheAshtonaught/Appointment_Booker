@@ -155,6 +155,54 @@ Appointments</string>
                                             <outlet property="dateLabel" destination="6Vl-eN-oVz" id="MxV-0P-Lum"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="UpcomingAppointmentCell" id="lqY-j8-hJ3" customClass="UpcomingAppointmentCell" customModule="Appointment_Booker" customModuleProvider="target">
+                                        <rect key="frame" x="51.5" y="229" width="311" height="127"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jl5-NE-k8y">
+                                            <rect key="frame" x="0.0" y="0.0" width="311" height="127"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSK-ah-4on">
+                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="101.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Appointment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SO0-jK-fTN">
+                                                            <rect key="frame" x="8" y="0.0" width="173.5" height="101.5"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIV-zP-LPd">
+                                                            <rect key="frame" x="217" y="31.5" width="86" height="39"/>
+                                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="SO0-jK-fTN" secondAttribute="bottom" id="0G0-fU-r6E"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FIV-zP-LPd" secondAttribute="trailing" constant="8" id="LZZ-el-lNQ"/>
+                                                        <constraint firstItem="FIV-zP-LPd" firstAttribute="centerY" secondItem="nSK-ah-4on" secondAttribute="centerY" id="Ral-FS-fhc"/>
+                                                        <constraint firstItem="SO0-jK-fTN" firstAttribute="top" secondItem="nSK-ah-4on" secondAttribute="top" id="gqz-9c-y4Y"/>
+                                                        <constraint firstItem="SO0-jK-fTN" firstAttribute="leading" secondItem="nSK-ah-4on" secondAttribute="leading" constant="8" id="tM9-hP-9BL"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAh-LN-xzZ">
+                                                    <rect key="frame" x="255" y="97" width="48" height="30"/>
+                                                    <state key="normal" title="Cancel"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CAh-LN-xzZ" secondAttribute="trailing" constant="8" id="5xX-b4-0y1"/>
+                                                <constraint firstAttribute="bottom" secondItem="CAh-LN-xzZ" secondAttribute="bottom" id="7GY-N9-Pqw"/>
+                                                <constraint firstItem="nSK-ah-4on" firstAttribute="leading" secondItem="Jl5-NE-k8y" secondAttribute="leading" id="8fz-mi-gC6"/>
+                                                <constraint firstAttribute="trailing" secondItem="nSK-ah-4on" secondAttribute="trailing" id="dcO-OC-CD3"/>
+                                                <constraint firstItem="nSK-ah-4on" firstAttribute="top" secondItem="Jl5-NE-k8y" secondAttribute="top" id="fOL-Q4-J9A"/>
+                                                <constraint firstItem="nSK-ah-4on" firstAttribute="height" secondItem="Jl5-NE-k8y" secondAttribute="height" multiplier="0.8" id="zkM-N4-BYt"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="311" height="127"/>
+                                    </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="5rF-lc-Qv4"/>
